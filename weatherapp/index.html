@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <div class="wrapper">
+      <!-- header -->
+      <div class="header">Weather App</div>
+
+      <!-- tab-container -->
+      <div class="tab-container">
+        <div class="tab" data-yourWeatherTab>Your Weather</div>
+        <div class="tab" data-searchTab>Search Weather</div>
+      </div>
+
+      <!-- search bar -->
+      <div class="search-bar" data-searchBar>
+        <input
+          class="text-box"
+          type="search"
+          placeholder="search any city...."
+          data-searchText
+        />
+        <label data-searchIcon><i data-feather="search"></i> </label>
+      </div>
+
+      <!-- loading -->
+      <div class="loader" data-loading>
+        <img height="100px" width="100px" src="./assets/loading.gif" />
+      </div>
+
+      <!-- grant location access section -->
+      <div class="location-access" data-allowPermission>
+        <img height="120" width="120" src="./assets/route.png" />
+        <h1>Grant Location Access</h1>
+        <h2>Allow Access To Get Weather Information</h2>
+        <button class="btn" data-grantAccessBtn>GRANT ACCESS</button>
+      </div>
+
+      <!-- weather details -->
+      <div class="weather-details" data-weatherDetails>
+        <!-- city name and country flag -->
+        <div class="city-name">
+          <div class="city" data-cityName></div>
+          <img height="30" width="40" src="" data-flag />
+        </div>
+        <!-- cloud det -->
+        <div class="cloud-det">
+          <div class="cond" data-weather></div>
+          <img src="" height="100" width="100" data-weatherIcon />
+          <div class="temp" data-temp>Temp</div>
+        </div>
+        <!-- more det -->
+        <div class="moreDet">
+          <div class="det-card">
+            <img height="50" width="50" src="./assets/wind.png" />
+            <div>WINDSPEED</div>
+            <div data-windSpeed></div>
+          </div>
+          <div class="det-card">
+            <img height="50" width="50" src="./assets/humidity.png" />
+            <div>HUMIDITY</div>
+            <div data-humidity></div>
+          </div>
+          <div class="det-card">
+            <img height="50" width="50" src="./assets/cloud-computing.png" />
+            <div>CLOUDS</div>
+            <div data-clouds>4.63 m/s</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- error -->
+      <div class="error" data-error>
+        <img src="./assets//error.png" />
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
